@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox Challenge</title>
+        <style>
+            .header{
+                height: 100px;
+                background-color: rgb(141, 76, 179);
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .left-section{
+                color: white;
+                font-size: 30px;
+                font-family: Verdana;
+                font-weight: bold;
+                margin-left: 15px;
+            }
+
+            .home-btn{
+                text-decoration: none;
+                color: white;
+            }
+
+            .home-btn:hover{
+                background-color: white;
+                color: rgb(141, 76, 179);
+                border-radius: 5px;
+                padding: 5px;
+                transition: 0.3s;
+            }
+
+            .home-btn:not(:hover){
+                transition: 0.2s;   
+            }
+
+            .search-bar{
+                border-radius: 50px;
+                border-width: 0px;
+                height: 100%;
+                width: 100%;
+                padding-left: 20px;
+                font-size: 100%;
+            }
+
+            .middle-section{
+                flex: 1;
+                margin-left: 70px;
+                margin-right: 70px;
+                height: 60%;
+                
+            }
+
+            .download-btn{
+                color: white;
+                font-family: Verdana;
+                font-size: 30px;
+                background-color: rgb(141, 76, 179);
+                border-width: 2px;
+                border-color: white;
+                border-style: solid;
+                border-radius: 2px;
+                margin-right: 15px;
+                width: 160px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .download-btn:hover{
+                background-color: white;
+                color: rgb(141, 76, 179);
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .download-btn:not(hover){
+                transition: 0.2s;
+            }
+
+            .menu{
+                margin: auto;
+                margin-top: 30px;
+                border-radius: 10px;
+                border-color: lightgray;
+                border-style: solid;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 300px;
+                width: 600px;
+                padding-left: 18px;
+                padding-right: 18px;
+                font-family: Arial;            
+            }
+
+            .home-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .notifications-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .messages-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .number{
+                background-color: rgb(79, 79, 238);
+                color: white;
+                border-radius: 30px;
+                padding: 7px;
+                padding-left: 18px;
+                padding-right: 18px;
+                font-size: 30px;
+            }
+
+            .home, .notifications, .messages{
+                font-size: 30px;
+                color: black;
+                text-decoration: none;
+            }
+
+            .home:hover, .notifications:hover, .messages:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .suggestion{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-family: Arial;
+                border-color: lightgray;
+                border-style: solid;
+                border-radius: 10px;
+                padding: 18px;
+                margin: auto;
+                margin-top: 30px;
+                width: 500px;
+                height: 350px;
+            }
+
+            .cat-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 85px;
+            }
+
+            .cat-profile-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 250px;
+            }
+
+            .cat-info-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 80px;
+                margin-left: 20px;
+            }
+
+            .cat-profile-pic{
+                width: 70px;
+                height: 70px;
+                border-radius: 50px;
+                object-fit: cover;
+            }
+
+            .cat-details{
+                color: gray;
+            }
+
+            .cat-name, .cat-details{
+                margin: 0;
+            }
+
+            .follow-btn{
+                background-color: rgb(79, 79, 238);
+                color: white;
+                border: 0cap;
+                border-radius: 3px;
+                padding: 10px;
+            }
+
+            .follow-btn:hover{
+                cursor: pointer;
+            }
+
+            .follow-btn:active{
+                background-color: rgb(28, 28, 245);
+            }
+
+            .cat-name, .cat-details, .follow-btn{
+                font-size: 22px;
+            }
+
+            .cat-name{
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .cat-name:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="left-section">
+                <a class="home-btn" href="#">Home</a>
+            </div>
+
+            <div class="middle-section">
+                <input class="search-bar" type="text" placeholder="Search"/>
+            </div>
+
+            <div class="right-section">
+                <button class="download-btn">Download</button>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="home-container">
+                <a class="home" href="#">
+                    Home
+                </a>
+                <div class="number">
+                    14
+                </div>
+            </div>
+            <div class="notifications-container">
+                <a class="notifications" href="#">
+                    Notifications
+                </a>
+                <div class="number">
+                    3
+                </div>
+            </div>
+            <div class="messages-container">
+                <a class="messages" href="#">
+                    Messages
+                </a>
+                <div class="number">
+                    5
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestion">
+            <div class="cat-container">
+                <div class="cat-profile-container">
+                    <a href="#"> 
+                    <img class="cat-profile-pic" src="cats-profile-pic/Akira.jpg"/>
+                    </a>    
+                    <div class="cat-info-container">
+                        <a href="#" class="cat-name">Akira</a>
+                        <p class="cat-details">Energetic cat</p>
+                        <p class="cat-details">Popular</p>
+                    </div>
+                </div>
+                <button class="follow-btn">
+                    Follow
+                </button>
+            </div>
+
+            <div class="cat-container">
+                <div class="cat-profile-container">
+                    <a href="#"> 
+                        <img class="cat-profile-pic" src="cats-profile-pic/Jobert.webp"/>
+                    </a>
+                    <div class="cat-info-container">
+                        <a href="#" class="cat-name">Jobert</a>
+                        <p class="cat-details">Sigma Cat</p>
+                        <p class="cat-details">Popular</p>
+                    </div>
+                </div>
+                <button class="follow-btn">
+                    Follow
+                </button>
+            </div>
+
+            <div class="cat-container">
+                <div class="cat-profile-container">
+                    <a href="#"> 
+                        <img class="cat-profile-pic" src="cats-profile-pic/Junard.webp"/>
+                    </a>
+                    <div class="cat-info-container">
+                        <a href="#" class="cat-name">Junard</a>
+                        <p class="cat-details">Behave Cat</p>
+                        <p class="cat-details">Popular</p>
+                    </div>
+                </div>
+                <button class="follow-btn">
+                    Follow
+                </button>
+
+            </div>
+        </div>
+    </body>
+</html>

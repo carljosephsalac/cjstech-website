@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grid Exercise</title>
+        <style>
+            .main-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 30px;
+                row-gap: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                align-items: center;
+                width: 1600px;
+                border-radius: 10px;
+                border-color: lightgray;
+                border-style: solid;
+                margin: auto;
+                padding: 20px;
+            }
+
+            .grid{
+                display: grid;
+                grid-template-rows: 360px 110px 50px;
+                row-gap: 10px;
+                box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.42);
+                -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.42);
+                -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.42);               
+                align-items: center;
+                width: 360px;
+                height: 550px;
+                margin: auto;
+            }
+
+            .pigeon-profile{
+                width: 100%;
+                height: 357px;
+                object-fit: cover;
+                object-position: 50% 40%;
+            }
+
+            .pigeon-info-container{
+                display: grid;
+                grid-template-rows: 20px 78px;
+                row-gap: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                align-items: center;
+                
+            }
+
+            .pigeon-name{
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 33px;
+                margin-top: 5px;
+            }
+
+            .pigeon-name:hover{
+                text-decoration: underline;
+            }
+
+            .mutual-profile-container{
+                display: grid;
+                grid-template-columns: 55px 1fr;
+                column-gap: 10px;
+                align-items: center;
+                
+            }
+
+            .mutual-profile{
+                border-radius: 30px;
+                width: 100%;
+                height: 55px;
+                object-fit: cover;
+                object-position: 40% 8%;
+            }
+
+            .mutual-friends{
+                color: rgb(87, 85, 85);
+                font-size: 22px;
+            }
+
+            .add-btn{
+                color: white;
+                background-color: rgb(99, 99, 234);
+                border-radius: 10px;
+                border: none;
+                height: 50px;
+                width: 150px;
+                font-size: 20px;
+                margin-left: 10px;
+            }
+
+            .add-btn:hover{
+                cursor: pointer;
+                background-color: rgb(79, 79, 180);
+                transition: 0.3s;
+            }
+
+            #ava{
+                object-position: 50% 10%;
+            }
+
+            #birdie{
+                object-position: 37%;
+            }
+
+            #mutual-ashton{
+                object-position: 1%;
+            }
+
+            #mutual-alvin{
+                object-position: 50% 30%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="grid">
+                <a href="#">
+                    <img class="pigeon-profile" src="pigeon-profile-pic/Abigail.jpg"/>
+                </a>
+                <div class="pigeon-info-container">
+                    <a class="pigeon-name" href="#">
+                        Abigail
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img class="mutual-profile" src="pigeon-profile-pic/Blinky.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            2 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div> 
+            
+            <div class="grid">
+                <a href="#">
+                    <img class="pigeon-profile" src="pigeon-profile-pic/Acer.jpg"/>
+                </a>
+                <div class="pigeon-info-container">              
+                    <a class="pigeon-name" href="#">
+                        Acer
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img class="mutual-profile" src="pigeon-profile-pic/Birdie.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            5 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div>
+
+            <div class="grid">
+                <a href="#">
+                    <img class="pigeon-profile" src="pigeon-profile-pic/Alvin.jpg"/>
+                </a>
+                <div class="pigeon-info-container">
+                    <a class="pigeon-name" href="#">
+                        Alvin
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img class="mutual-profile" src="pigeon-profile-pic/Ava.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            8 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div>
+
+            <div class="grid">
+                <a href="#">
+                    <img class="pigeon-profile" src="pigeon-profile-pic/Angie.webp"/>
+                </a>
+                <div class="pigeon-info-container">
+                    <a class="pigeon-name" href="#">
+                        Angie
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img id="mutual-ashton" class="mutual-profile" src="pigeon-profile-pic/Ashton.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            4 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div>
+
+            <div class="grid">
+                <a href="#">
+                    <img class="pigeon-profile" src="pigeon-profile-pic/Ashton.jpg"/>
+                </a>
+                <div class="pigeon-info-container">
+                    <a class="pigeon-name" href="#">
+                        Ashton
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img class="mutual-profile" src="pigeon-profile-pic/Angie.webp"/>
+                        </a>
+                        <p class="mutual-friends">
+                            2 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div> 
+            
+            <div class="grid">
+                <a href="#">
+                    <img id="ava" class="pigeon-profile" src="pigeon-profile-pic/Ava.jpg"/>
+                </a>
+                <div class="pigeon-info-container">              
+                    <a class="pigeon-name" href="#">
+                        Ava
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img id="mutual-alvin" class="mutual-profile" src="pigeon-profile-pic/Alvin.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            5 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div>
+
+            <div class="grid">
+                <a href="#">
+                    <img id="birdie" class="pigeon-profile" src="pigeon-profile-pic/Birdie.jpg"/>
+                </a>
+                <div class="pigeon-info-container">
+                    <a class="pigeon-name" href="#">
+                        Birdie
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img class="mutual-profile" src="pigeon-profile-pic/Acer.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            8 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div>
+
+            <div class="grid">
+                <a href="#">
+                    <img class="pigeon-profile" src="pigeon-profile-pic/Blinky.jpg"/>
+                </a>
+                <div class="pigeon-info-container">
+                    <a class="pigeon-name" href="#">
+                        Blinky
+                    </a>
+                    <div class="mutual-profile-container">
+                        <a href="#">
+                            <img class="mutual-profile" src="pigeon-profile-pic/Abigail.jpg"/>
+                        </a>
+                        <p class="mutual-friends">
+                            4 mutual friends
+                        </p>   
+                    </div>   
+                </div>
+                <button class="add-btn">Add Friend</button>
+            </div>
+        </div>
+
+    
+    </body>
+</html>
